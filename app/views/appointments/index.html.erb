@@ -1,0 +1,10 @@
+<h1>Scheduler</h1>
+
+<ul>
+  <% @appointments.each do |a| %>
+    <li>
+      <%= link_to a.time, a %>
+    </li>
+  <% end %>
+</ul>
+
