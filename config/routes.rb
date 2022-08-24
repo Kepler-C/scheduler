@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root "appointments#index"
   # get "/appointments", to: "appointments#index" 
   # get "/appointments/:id", to: "appointments#show"
-  resources :appointments
+  resources :appointments do
+    resources :comments
+  end
 
 end

@@ -8,6 +8,25 @@
 </ul>
 
 
+<h2>Comments</h2>
+<%= render @appointment.comments %>
+
+
+<h2>Add comment</h2>
+<%= form_with model: [ @appointment, @appointment.comments.build ] do |form| %>
+  <p>
+    <%= form.label :commenter  %><br>
+    <%= form.text_field :commenter  %>
+  </p>
+  <p>
+    <%= form.label :body  %><br>
+    <%= form.text_area :body  %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 <div>
   <a href="/">Home</a>
 </div>
