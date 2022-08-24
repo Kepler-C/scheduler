@@ -1,0 +1,47 @@
+<%= form_with model: appointment do |form| %>
+
+  <div>
+    <%= form.label :date %><br>
+    <%= form.text_field :date %>
+    <% appointment.errors.full_messages_for(:date).each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :time %><br>
+    <%= form.text_field :time %>
+    <% appointment.errors.full_messages_for(:time).each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :patient_name %><br>
+    <%= form.text_field :patient_name %>
+    <% appointment.errors.full_messages_for(:patient_name).each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :issue %><br>
+    <%= form.text_area :issue %>
+    <% appointment.errors.full_messages_for(:issue).each do |message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
