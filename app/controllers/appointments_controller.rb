@@ -1,5 +1,7 @@
 class AppointmentsController < ApplicationController
 
+  http_basic_authenticate_with name: "user1", password: "secret", except: [:index, :show]
+
   def index
     @appointments = Appointment.all
   end

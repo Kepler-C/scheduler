@@ -1,7 +1,7 @@
 class Appointment < ApplicationRecord
   include Visible
   
-  has_many :comments
+  has_many :comments, dependent: :destroy
   
   validates :patient_name, presence: true
   validates :date, presence: true
