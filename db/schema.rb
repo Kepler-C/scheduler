@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_24_211201) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_25_133006) do
   create_table "appointments", force: :cascade do |t|
     t.string "patient_name"
     t.string "date"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_211201) do
     t.text "issue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -26,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_211201) do
     t.integer "appointment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
     t.index ["appointment_id"], name: "index_comments_on_appointment_id"
   end
 

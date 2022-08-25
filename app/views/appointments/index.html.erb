@@ -1,10 +1,14 @@
 <h1>Scheduler</h1>
 
+<p>Number of appointments: <%= Appointment.public_count %></p>
+
 <ul>
-  <% @appointments.each do |a| %>
-    <li>
-      <%= link_to a.time, a %>
-    </li>
+  <% @appointments.each do |appointment| %>
+    <% unless appointment.archived? %>
+      <li>
+        <%= link_to appointment.time, appointment %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
