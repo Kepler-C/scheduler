@@ -1,0 +1,13 @@
+<%= form_with model: [ @appointment, @appointment.prescriptions.build ] do |form| %>
+  <p>
+    <%= form.label :drug %><br>
+    <%= form.text_field :drug %>
+  </p>
+  <p>
+    <%= form.label :amount %><br>
+    <%= form.text_area :amount %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

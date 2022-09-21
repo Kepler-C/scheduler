@@ -15,6 +15,12 @@
 <h2>Add comment</h2>
 <%= render 'comments/form' %>
 
+<h2>Prescription</h2>
+<%= render @appointment.prescriptions %>
+
+<h2>Add a prescription:</h2>
+<%= render 'prescriptions/form' %>
+
 <div>
   <a href="/">Home</a>
 </div>
